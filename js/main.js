@@ -46,7 +46,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "GET", 
-            url: "../pic360.php",
+            url: "../php/pic360.php",
             dataType : "json",
             data:{start:oStart},
             success: function(data){
