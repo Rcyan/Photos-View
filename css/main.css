@@ -1,0 +1,539 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Microsoft Yahei, "微软雅黑", "Helvetica Neue", Helvetica, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+body{
+  width: 1362px;
+  overflow-x:hidden; 
+}
+/*回到顶部*/
+.backToTop{
+	position: fixed;
+	top: 600px;
+	right: 20px;
+	background: red;
+	z-index: 999;
+	height: 48px;
+	width: 48px;
+	display: none;
+	background: url(../img/backToTop.png);
+}
+.backToTop:hover{
+	cursor: pointer;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+ul{
+	list-style:none;
+}
+.navbar{
+	padding:0 30px;
+}
+.current{
+	background: rgba(157,157,157,0.2);
+}
+.download{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: url(../img/download.png);
+	opacity: 0.8;
+	right: 10px;
+	bottom: 35px;
+	position:fixed;
+	z-index: 100;
+}
+.download:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+.section span{
+	display: inline-block;
+	line-height: 0;
+	font-size: 0;
+}
+.section p{
+	position: absolute;
+	bottom:5px;
+	left: 20px;
+	font-weight: 700;
+	color: #ecede8;
+}
+
+.img360news{
+	height: 250px;
+	width: 430px;
+	margin:0 15px 15px 0;
+}
+.picContainer{
+	overflow:hidden;
+}
+.newPic{
+	padding-top: 51px;
+	overflow-y:hidden;
+}
+.newPic li{
+	width: 452px;
+	list-style: none;
+}
+.newPic li img{
+	width: 452px;
+	border: 1px solid #9d9d9d;
+}
+.loading,.loadC,.classifyLoading{
+	display: inline-block;
+	width: 1360px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background: #fff;
+}
+.load{
+	position: absolute;
+	top: 52px;
+}
+.main{
+	height: 661px;
+}
+.dropdown-menu{
+	background:#333;
+	height: 228px;
+}
+.dropdown-menu>li{
+	width: 78px;
+}
+.dropdown-menu>li>a{
+	color: #9d9d9d;
+	width: 78px;
+	padding: 0;
+	text-align: center;
+	line-height: 24px;
+}
+.dropdown-menu>li>a:hover{
+	background: #545151;
+	color: #fff;
+	cursor:pointer;
+}
+
+.newPic div{
+	position: relative;
+}
+.downloadUl a{
+	display: block;
+	height: 30px;
+	width: 85px;
+	color: #9d9d9d;
+	margin-right: 3px;
+	text-decoration: none;
+	padding: 0 18px;
+	font-size:12px;
+	line-height: 30px;
+	border-radius: 2px;
+	position: relative;
+	float: left;
+}
+.downloadUl span{
+	display: block;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	top: 7px;
+	left: 2px;
+	background: url(../img/pbl_download.png)
+}
+.downloadUl a:hover{
+    background: rgba(163,163,163,0.4);
+}
+.downloadUl{
+   height:50px;
+   padding:10px 5px;
+   width:451px;
+   position:absolute;
+   bottom:0;
+   left:0;
+   background:rgba(0,0,0,0.7);
+   background: linear-gradient(to top,rgba(0,0,0,1) 0,rgba(0,0,0,0) 100%);
+   display: none;
+});
+
+
+/*媒体查询*/
+@media screen and (max-width:320px){}
+@media (max-width: 320px) {
+	/*导航栏*/
+	*,.navbar a{
+		font-size: 14px;
+	}
+    .navbar{
+	    padding:0;
+	    height: 30px;
+    }  
+    .navbar-header,.navbar-header a{
+        width: 80px;
+    }
+    .container-fluid{
+    	position: relative;
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    left: 100px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+	/*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 100%;
+	}
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		display: none;
+	}
+
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+	/*导航栏*/
+	*,.navbar a{
+		font-size: 14px;
+	}
+    .navbar{
+	    padding:0;
+	    height: 30px;
+    }  
+    .navbar-header,.navbar-header a{
+        width: 80px;
+    }
+    .container-fluid{
+    	position: relative;
+    	/*margin:0 auto;*/
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    left: 100px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+    /*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 100%;
+	}
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		display: none;
+	}
+
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+@media (min-width:376px) and (max-width:414px){
+    /*导航栏*/
+	*,.navbar a{
+		font-size: 14px;
+	}
+    .navbar{
+	    padding:0;
+	    height: 30px;
+    }  
+    .navbar-header,.navbar-header a{
+        width: 80px;
+    }
+    .container-fluid{
+    	position: relative;
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    left: 150px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+    /*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 100%;
+	}
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		display: none;
+	}
+
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+@media (min-width: 415px) and (max-width: 459px){
+	/*导航栏*/
+	*,.navbar a{
+		font-size: 14px;
+	}
+    .navbar{
+	    padding:0;
+	    height: 30px;
+    }  
+    .navbar-header,.navbar-header a{
+        width: 80px;
+    }
+    .container-fluid{
+    	position: relative;
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    left: 150px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+	/*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 100%;
+	}
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		width: 100%;
+	}
+	.downloadUl a:last-child,.downloadUl a:nth-child(3),.downloadUl a:nth-child(4){
+		display:none;
+	}
+
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 557px){
+	/*导航栏*/
+	*,.navbar a{
+		font-size: 14px;
+	}
+    .navbar{
+	    padding:0;
+	    height: 30px;
+    }  
+    .navbar-header,.navbar-header a{
+        width: 80px;
+    }
+    .container-fluid{
+    	position: relative;
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    left: 150px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+	/*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 100%;
+	}
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		width: 100%;
+	}
+	.downloadUl a:last-child,.downloadUl a:nth-child(4){
+		display:none;
+	}
+
+  /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+
+@media (min-width: 558px) and (max-width: 768px){
+    .container-fluid{
+    	position: relative;
+    }
+    .collapse{
+    	display: inline-block;
+    	position: absolute;
+    	top: 0;
+    }
+    .collapse .navRight{
+  	    position: absolute;
+  	    right: -300px;
+  	    top: -7px;
+  	    width: 210px;
+  	    height: 50px;
+  	    margin-left: 0;
+    }
+    .navRight li,.collapse .navRight li a{
+    	padding: 0;
+    	height: 50px;
+    	width: 70px;
+    	float: left;
+    	line-height: 46px;
+    	text-align: center;
+    }
+    .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+	/*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 50%;
+	}
+	.newPic li img{
+		width: 100%;
+	}
+
+	/*鼠标手指滑过时显示*/
+	.downloadUl{
+		width: 100%;
+	}
+	.downloadUl a:last-child,.downloadUl a:nth-child(4){
+		display:none;
+	}
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+  .container-fluid{
+  	position: relative;
+  }
+  .collapse{
+  	display: inline-block;
+  	position: absolute;
+  	top: 0;
+  }
+  .collapse .navRight{
+	    position: absolute;
+	    right: -300px;
+	    top: 0px;
+	    width: 210px;
+	    height: 50px;
+	    margin-left: 0;
+  }
+  .navRight li,.collapse .navRight li a{
+  	padding: 0;
+  	height: 50px;
+  	width: 70px;
+  	float: left;
+  	line-height: 46px;
+  	text-align: center;
+  }
+  .collapse .navRight li:last-child,.collapse .navRight li:nth-child(2){
+	    display:none;
+	}
+
+	/*瀑布流图片*/
+	.newPic li{
+      width: 50%;
+	}
+	.newPic li img{
+		width: 100%;
+	}
+    /*每日英语*/
+  #everyBox p{
+    display: none;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px){
+	/*瀑布流图片*/
+	.newPic li,.newPic li img{
+        width: 33.3%;
+	}
+	.newPic li img{
+		width: 100%;
+	}
+}
