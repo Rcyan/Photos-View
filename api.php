@@ -9,12 +9,12 @@
 		preg_match_all('/<copyright>(.*?)<\/copyright>/ies', $str1, $matches1a, PREG_SET_ORDER);
 		preg_match_all('/<copyright>(.*?)<\/copyright>/ies', $str2, $matches2a, PREG_SET_ORDER);
 		for($i=1;$i<8;$i++){
-			$imgurl='http://cn.bing.com'.$matches1[$i][1];
+			$imgurl='https://cn.bing.com'.$matches1[$i][1];
 			$copyRight=$matches1a[$i][0];
 			echo "<div class='section' style='background:url($imgurl);height:100%;width:100%'><p>$copyRight</p><span>$imgurl</span></div>";
 		}
 		for($i=1;$i<8;$i++){
-			$imgurl='http://cn.bing.com'.$matches2[$i][1];
+			$imgurl='https://cn.bing.com'.$matches2[$i][1];
 			$copyRight=$matches2a[$i][0];
 			echo "<div class='section' style='background:url($imgurl);height:100%;width:100%'><p>$copyRight</p><span>$imgurl</span></div>";
 		}
