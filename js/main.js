@@ -46,7 +46,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "GET", 
-            url: "../02-Wallpaper/pic360.php",
+            url: "../pic360.php",
             dataType : "json",
             data:{start:oStart},
             success: function(data){
@@ -129,7 +129,7 @@ $(document).ready(function(){
     function  classify(){
         $.ajax({
             type: "GET", 
-            url: "../02-Wallpaper/classify.php", 
+            url: "../classify.php", 
             data: "cid=360tags",
             dataType : "json",
             success:function(data){
