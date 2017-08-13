@@ -166,7 +166,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "GET", 
-            url: "../02-Wallpaper/everyClassify.php", 
+            url: "../everyClassify.php", 
             data:{cid:oCid,start:start},
             dataType : "json",
             success:function(data){
@@ -211,7 +211,7 @@ $(document).ready(function(){
         css.attr({
             rel: "stylesheet",
             type: "text/css",
-            href: "../02-Wallpaper/css/jquery.pagepiling.css"
+            href: "../css/jquery.pagepiling.css"
         });
         //盒子容器的样式
         $(".picContainer").css({
@@ -274,7 +274,7 @@ $(document).ready(function(){
         css.attr({
             rel: "stylesheet",
             type: "text/css",
-            href: "../02-Wallpaper/css/jquery.pagepiling.css"
+            href: "../css/jquery.pagepiling.css"
         });
 
         $.ajax({
