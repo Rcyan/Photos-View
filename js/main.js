@@ -125,7 +125,7 @@ $(document).ready(function(){
         return oTop;
     }
 
-    //2.
+    //2.background
     function  classify(){
         $.ajax({
             type: "GET", 
@@ -186,7 +186,6 @@ $(document).ready(function(){
 
                     var oDiv=$("<div><a href="+data.data[i].url+" target='_blank'><img class='oImg' style="+"width:452px;height:"+height+" src="+data.data[i].url+"></a></div>");
                     
-                    $(".oImg").css("background","rgba(0,0,0,0.8)");
                     var oUl=plbDownload(data.data[i],oDiv);
                     oDiv.append(oUl);
                 }
